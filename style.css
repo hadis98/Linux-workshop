@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f8c625 !important;
     font-family: "Handlee", cursive;
@@ -14,7 +18,13 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 1em;
+    margin: 2rem;
+}
+
+.imageCol {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .signUp {
@@ -27,13 +37,36 @@ body {
 
 .social-media {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .social-media a {
-    margin-right: 10px;
+    margin-right: 0.3rem;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.social-media i {
+    color: white;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+.socialBtn {
+    background-color: rgb(56, 56, 56);
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.socialBtn:hover {
+    text-decoration: none;
+    background-color: rgb(70, 68, 68);
+}
+
+.social-media a:hover {
+    color: black;
 }
 
 button {
@@ -60,8 +93,43 @@ input[type="text"] {
 input {
     padding: 0.5em 0.8em;
     margin: 0.5em 2em;
+    border: 0 !important;
+    outline: 0 !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border: none !important;
+    box-shadow: 0 0 0 0 !important;
 }
 
 label {
     margin-bottom: 0.1em !important;
+}
+
+.footer {
+    margin-bottom: 2rem;
+}
+
+@media(max-width:768px) {
+    .container {
+        max-width: 90% !important;
+    }
+    .submitBtn {
+        width: 100%;
+    }
+    .imageCol {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width:576px) {
+    .container {
+        max-width: 95% !important;
+    }
+    .workshop-header {
+        margin-top: 1.5rem;
+    }
 }
