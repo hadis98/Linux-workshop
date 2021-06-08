@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linux WorkShop 2021</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Handlee" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d8428dc404.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="myScript.js"></script> -->
+    <style>
+        body {
+            font-family: "Handlee", cursive;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row header" style="direction: ltr">
+            <div class="col-sm-6">
+                <img src="./images/apachee.png" width="200" height="80" />
+            </div>
+            <div class="col-sm-6">
+                <h1 class="h1">Linux WorkShop 2021</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="images/linux.png" alt="" class="img-fluid" />
+            </div>
+            <div class="col-sm-6 signUp">
+                <div id="signUpForm">
+                    <form action="#" class="form-group">
+                        <label for="fname">First Name</label>
+                        <input class="form-control form-text" type="text" id="fname" name="firstname" placeholder="Your name..." required />
+                        <label for="lname">Last Name</label>
+                        <input class="form-control form-text" type="text" id="lname" name="lastname" placeholder="Your last name..." required />
+
+                        <label for="PhoneNumber">PhoneNumber</label>
+                        <input class="form-control form-text" type="tel" id="PhoneNumber" name="PhoneNumber" placeholder="09XXXXXXXXX" required />
+                        <label for="Email">Email</label>
+                        <input class="form-control form-text" type="email" id="Email" name="Email" placeholder="Enter your Email" required />
+                        <p>SignUp Method</p>
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="apachee" value="option1" checked />
+                                <label class="form-check-label" for="apachee">
+                    APACHEE Member(160.000T)
+                  </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="iut" value="option2" />
+                                <label class="form-check-label" for="iut">
+                    IUT Student (200.000T)
+                  </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="nonIut" value="option2" />
+                                <label class="form-check-label" for="nonIut">
+                    Non-IUT Student (300.000T)
+                  </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gridRadios" id="regular" value="option2" />
+                                <label class="form-check-label" for="gridRadios2">
+                    Regular (900.000T)
+                  </label>
+                            </div>
+                        </div>
+                        <label for="studentCode">Student Code</label>
+                        <input disabled class="form-control form-text" type="text" id="studentCode" name="studentCode" placeholder="Your student Code" />
+                        <label for="discountCode">discount Code</label>
+                        <input disabled class="form-control form-text" type="number" id="discountCode" name="discountCode" placeholder="Your discount Code" />
+                        <input type="submit" value="Submit" class="btn-dark mt-2 mb-2" />
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="
+            col-sm-7 col-md-6
+            bg-light
+            text-dark
+            rounded
+            text-center
+            pt-2
+            attention
+          ">
+                <p class="text-capitalize">
+                    <span class="text-uppercase">attention</span><br /> discount code only belongs to ApaChee members
+                </p>
+            </div>
+            <div class="col-sm-5 col-md-6 social-media mt-2">
+                <a href="#" class="btn btn-dark"><i class="fab fa-twitter h4"></i></a>
+                <a href="#" class="btn btn-dark"><i class="fab fa-telegram h4"></i
+          ></a>
+                <a href="#" class="btn btn-dark"><i class="fab fa-instagram h4"></i
+          ></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        function _(selector) {
+            return document.querySelector(selector);
+        }
+        _("#apachee").checked = false;
+        _("#apachee").addEventListener("change", () => {
+            _("#studentCode").disabled = false;
+            _("#discountCode").disabled = false;
+        });
+
+        _("#iut").addEventListener("change", () => {
+            _("#studentCode").disabled = false;
+            _("#discountCode").disabled = true;
+        });
+
+        _("#nonIut").addEventListener("change", () => {
+            _("#studentCode").disabled = false;
+            _("#discountCode").disabled = true;
+        });
+
+        _("#regular").addEventListener("change", () => {
+            _("#studentCode").disabled = true;
+            _("#discountCode").disabled = true;
+        });
+
+        $(function() {
+            $("input").addClass("rounded");
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

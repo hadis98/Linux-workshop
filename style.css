@@ -1,0 +1,67 @@
+body {
+    background-color: #f8c625 !important;
+    font-family: "Handlee", cursive;
+    direction: rtl;
+}
+
+.container {
+    max-width: 1400px;
+    margin-top: 1em;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+}
+
+.signUp {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media a {
+    margin-right: 10px;
+}
+
+button {
+    font-size: 1.5rem !important;
+}
+
+#signUpForm {
+    display: block;
+    width: 100%;
+    direction: ltr;
+}
+
+#signUpForm label,
+input[type="text"] {
+    width: 100%;
+}
+
+.form-text {
+    outline: none;
+    border: 0;
+    margin-bottom: 0.7em;
+}
+
+input {
+    padding: 0.5em 0.8em;
+    margin: 0.5em 2em;
+}
+
+label {
+    margin-bottom: 0.1em !important;
+}
